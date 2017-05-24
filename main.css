@@ -1,0 +1,51 @@
+
+/* The element to apply the animation to */
+
+#explode {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* The animation code */
+@keyframes blow {
+      0% {
+      top: 50%;
+      left: 50%;
+    }
+    50%{
+      top: random(500)+px;
+      left: random(500)+px;
+    }
+    100% {
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+
+#explode.animated {
+        animation-duration: 2.6s;
+        animation-name: blow;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+}
+
+#explode.rotate {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);   
+		transform: rotateY(180deg);
+	}
+
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
