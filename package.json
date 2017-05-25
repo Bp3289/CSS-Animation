@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Bp3289/CSS-Animation#readme",
   "devDependencies": {
+    "animate-sass": "^0.6.6",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0"
   }

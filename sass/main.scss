@@ -1,0 +1,94 @@
+
+
+
+@mixin colors ($background, $border, $color) {
+      background: $background;
+      border-color: $border;
+      color: $color;
+    }
+
+  @mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@keyframes right {
+      0% {
+      top: 50%;
+      left: 50%;
+    }
+    50%{
+      top: random(500)+px;
+      left: random(500)+px;
+    }
+    100% {
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+  @keyframes below {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 200px;
+    }
+    75% {
+      top: 500px;
+    }
+    100% {
+      top: 100px;
+    }
+}
+  
+
+  @mixin animated {
+    animation-duration: 2.6s;
+    animation-name: right;
+    animation-iteration-count: 4;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+  }
+
+  @mixin hurry {
+    animation-name: below;
+    animation-duration: 2.6s;
+    animation-iteration-count: 4;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+  }
+
+  #box1, #box2 {
+  @include colors(black, green, blue);
+  @include border-radius(10px);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  font-size: 20px;
+  @include hurry;
+  }
+
+
+#explode, #other {
+  @include colors(black, green, blue);
+  @include border-radius(10px);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  font-size: 20px;
+  @include animated;
+}
+
+
+
+
+
+
+
+

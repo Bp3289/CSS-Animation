@@ -1,51 +1,58 @@
+@keyframes right {
+  0% {
+    top: 50%;
+    left: 50%; }
+  50% {
+    top: 130px;
+    left: 90px; }
+  100% {
+    top: 50%;
+    left: 50%; } }
 
-/* The element to apply the animation to */
+@keyframes below {
+  0% {
+    top: 0px; }
+  50% {
+    top: 200px; }
+  75% {
+    top: 500px; }
+  100% {
+    top: 100px; } }
 
-#explode {
-  width: 500px;
-  height: 500px;
+#box1, #box2 {
+  background: black;
+  border-color: green;
+  color: blue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
   position: relative;
   margin: auto;
-}
+  font-size: 20px;
+  animation-name: below;
+  animation-duration: 2.6s;
+  animation-iteration-count: 4;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out; }
 
-/* The animation code */
-@keyframes blow {
-      0% {
-      top: 50%;
-      left: 50%;
-    }
-    50%{
-      top: random(500)+px;
-      left: random(500)+px;
-    }
-    100% {
-      top: 50%;
-      left: 50%;
-    }
-  }
-
-
-#explode.animated {
-        animation-duration: 2.6s;
-        animation-name: blow;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-}
-
-#explode.rotate {
-		-webkit-transform: rotateY(180deg);
-		-moz-transform: rotateY(180deg);   
-		transform: rotateY(180deg);
-	}
-
-
-
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 4s;
-}
+#explode, #other {
+  background: black;
+  border-color: green;
+  color: blue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  font-size: 20px;
+  animation-duration: 2.6s;
+  animation-name: right;
+  animation-iteration-count: 4;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out; }

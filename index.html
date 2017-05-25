@@ -5,15 +5,24 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<button id="explode" class="alt">HEY THIS BOX CHANGES!</button>
 
-<p id="explode" class="alt">HEY THIS BOX CHANGES!</p>
-<!-- <div class="box"></div> -->
+<button id="other" class="alt">HEY IM A BOX TOO!</button>
+
+<button id="box1" class="alt">HEYYYYYYYYYYYYYYY</button>
+
+<button id="box2" class="alt">I'm a pain in the ass!</button>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
-	$( "#explode" ).click(function() {
-	  $( "#explode" ).toggleClass( "animated" );
+	$( "#explode, #other" ).click(function() {
+	  $( "#explode, #other" ).toggleClass( "animated");
 
+	});
+
+	$("#box1, #box2").click(function(){
+		$("#box1, #box2").toggleClass("hurry");
 	});
 	</script>
 
